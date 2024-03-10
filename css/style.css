@@ -59,7 +59,7 @@ a {
 }
 
 li {
-  	list-style-type: none;
+	list-style-type: none;
 }
 
 
@@ -87,7 +87,7 @@ li {
 .contact,
 .testimonial,
 .footer {
-  	background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 
@@ -97,11 +97,11 @@ li {
 .company,
 .newsletter,
 .location {
-  	background-color: var(--primary-light);
+	background-color: var(--primary-light);
 }
 
 .bottom {
-  	background-color: black;
+	background-color: black;
 }
 
 /* Gradient Border And Background On Icons */
@@ -114,13 +114,11 @@ li {
 .location .far,
 .location .fas {
 	padding: 15px 0;
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		from(#0ee951),
-		to(#00dabf)
-	);
+	background: -webkit-gradient(linear,
+			left top,
+			left bottom,
+			from(#0ee951),
+			to(#00dabf));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -145,7 +143,7 @@ li {
 	font-size: 0.875rem;
 	line-height: 0.875rem;
 	background-color: var(--primary);
-	
+
 	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.025);
 }
 
@@ -169,7 +167,8 @@ li {
 
 .offcanvas-collapse {
 	position: fixed;
-	top: 2.75rem; /* adjusts the height between the top of the page and the offcanvas menu */
+	top: 2.75rem;
+	/* adjusts the height between the top of the page and the offcanvas menu */
 	bottom: 0;
 	left: 100%;
 	width: 100%;
@@ -178,7 +177,7 @@ li {
 	padding-right: 1rem;
 	padding-left: 1rem;
 	/* background-color: var(--primary); */
-	backdrop-filter:blur(20px);
+	backdrop-filter: blur(20px);
 	transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
@@ -210,7 +209,7 @@ li {
 }
 
 .navbar .dropdown-item:hover {
-  	background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .navbar .dropdown-divider {
@@ -236,13 +235,11 @@ li {
 }
 
 .navbar .fa-stack-2x {
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		from(#0ee951),
-		to(#00dabf)
-	);
+	background: -webkit-gradient(linear,
+			left top,
+			left bottom,
+			from(#0ee951),
+			to(#00dabf));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -255,11 +252,11 @@ li {
 }
 
 .navbar .fa-stack:hover .fa-stack-2x {
-  	color: var(--primary);
+	color: var(--primary);
 }
 
 .navbar .fa-stack:hover .fa-stack-1x {
-  	color: var(--primary);
+	color: var(--primary);
 }
 
 .navbar .navbar-toggler {
@@ -280,7 +277,7 @@ li {
 	background-attachment: fixed;
 }
 
-.services{
+.services {
 	background-image: url(../assets/images/back2.jpg);
 	background-size: cover;
 	background-position: center;
@@ -288,7 +285,19 @@ li {
 	background-attachment: fixed;
 }
 
-.testimonial{
+.weather {
+	background-image: url(../assets/images/weather.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	height: 1140px;
+}
+
+
+
+.testimonial {
 	background-image: url(../assets/images/back.jpg);
 	background-size: cover;
 	background-position: center;
@@ -299,30 +308,31 @@ li {
 
 
 .para {
-  	width: 50%;
+	width: 50%;
 }
 
 .para-light {
 	text-align: justify;
-  	opacity: 0.7;
+	opacity: 0.7;
 }
+
 .para-light2 {
-  	opacity: 0.7;
+	opacity: 0.7;
 }
 
 /***********************/
 /*     Information     */
 /***********************/
 .information .container-fluid .row div:first-child {
-  	background-color: var(--primary);
+	background-color: var(--primary);
 }
 
 .information .container-fluid .row div:last-child {
-  	background-color: white;
+	background-color: white;
 }
 
 .information .container-fluid .row div:nth-child(2) {
-  	background-color: var(--primary-light);
+	background-color: var(--primary-light);
 }
 
 
@@ -392,6 +402,7 @@ li {
 /*     Services     */
 /********************/
 .services .card {
+	height: 250px;
 	padding: 20px;
 	margin-bottom: 20px;
 	border-radius: 0;
@@ -417,8 +428,7 @@ li {
 	border: 2px solid white;
 }
 
-.py-3
-{
+.py-3 {
 	text-align: justify;
 }
 
@@ -433,7 +443,7 @@ li {
 }
 
 .slider-1 .section-title {
-  	text-align: center;
+	text-align: center;
 }
 
 .slider-1 .h2-heading {
@@ -446,10 +456,11 @@ li {
 	border-image-slice: 1;
 	border-width: 3px;
 	border-image-source: var(--gradient);
+	height: 250px;
 }
 
 .slider-1 .slider-container {
-  	position: relative;
+	position: relative;
 }
 
 .slider-1 .swiper-container {
@@ -459,7 +470,7 @@ li {
 
 .slider-1 .swiper-button-prev,
 .slider-1 .swiper-button-next {
-  	color: var(--primary);
+	color: var(--primary);
 }
 
 .slider-1 .swiper-button-prev:focus,
@@ -496,11 +507,11 @@ li {
 }
 
 .slider-1 .card-body {
-  	padding: 0;
+	padding: 0;
 }
 
 .slider-1 .testimonial-text {
-  	margin-bottom: 0.75rem;
+	margin-bottom: 0.75rem;
 }
 
 .slider-1 .testimonial-author {
@@ -516,7 +527,7 @@ li {
 
 
 .btn-info {
-	
+
 	color: black;
 	border-width: 2px;
 	padding: 10px 30px;
@@ -568,8 +579,7 @@ li {
 	padding-bottom: 0.775rem;
 }
 
-.loc-input
-{
+.loc-input {
 	width: 40%;
 	background: none;
 	color: white;
@@ -581,40 +591,32 @@ li {
 	padding-bottom: 0.775rem;
 }
 
-.detailss
-{
+.detailss {
 	font-size: 30px;
 }
 
-.component-val
-{
+.component-val {
 	font-size: 20px;
 	/* margin: 40px; */
 }
 
-.g-5
-{
+.g-5 {
 	margin-top: var(--bs-gutter-y)
 }
 
-.col-6
-{
+.col-6 {
 	padding: 30px;
 }
 
-/* .g-5 div[0]
-{
-	border: 2px solid white;
-} */
+.weather__city
 
 
 
-.footerr
-{
+.footerr {
 	display: flex;
 	justify-content: center;
+	background-color: #00dabf;
 }
-
 
 /******************************/
 /*     Back To Top Button     */
@@ -635,7 +637,7 @@ li {
 }
 
 #myBtn:hover {
-  	background-color: #0f0f11;
+	background-color: #0f0f11;
 }
 
 #myBtn img {
@@ -655,7 +657,7 @@ li {
 }
 
 .ex-header h1 {
-  	color: #fff;
+	color: #fff;
 }
 
 .ex-basic-1 .list-unstyled .fas {
@@ -664,7 +666,7 @@ li {
 }
 
 .ex-basic-1 .list-unstyled .flex-grow-1 {
-  	margin-left: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .ex-basic-1 .text-box {
@@ -683,7 +685,7 @@ li {
 }
 
 .ex-cards-1 .card .fa-stack-2x {
-  	color: var(--secondary);
+	color: var(--secondary);
 }
 
 .ex-cards-1 .card .fa-stack-1x {
@@ -694,7 +696,7 @@ li {
 }
 
 .ex-cards-1 .card .list-unstyled .flex-grow-1 {
-  	margin-left: 2.25rem;
+	margin-left: 2.25rem;
 }
 
 .ex-cards-1 .card .list-unstyled .flex-grow-1 h5 {
@@ -707,6 +709,7 @@ li {
 /*     Media Queries     */
 /*************************/
 @media only screen and (max-width: 1024px) {
+
 	.services,
 	.work,
 	.testimonial,
@@ -819,5 +822,9 @@ li {
 		right: -16px;
 		width: 22px;
 		background-size: 22px 34px;
+	}
+	.weather
+	{
+		height: 950px;
 	}
 }

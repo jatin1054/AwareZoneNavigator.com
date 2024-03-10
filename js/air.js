@@ -9,8 +9,7 @@ const componentsEle = document.querySelectorAll(".component-val")
 const appId = "2e0bebeff84ffa9357419b7459ed1fb9"
 const airlink = "https://api.openweathermap.org/data/2.5/air_pollution"	// API end point
 
-const weaAppId = "150183583611358726c858161f87cfa5"
-const weaLink = "https://api.openweathermap.org/data/2.5/weather"  	// weather api end point
+
 
 const getUserLocation = () => {
 	// Get user Location

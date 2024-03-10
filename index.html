@@ -28,6 +28,8 @@
     <link href="./css/aos.min.css" rel="stylesheet">
     <link href="./css/swiper.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/weather.css" rel="stylesheet">
+    
 
 </head>
 
@@ -191,7 +193,7 @@
                         <p class="para-light">The website can provide real-time updates on air quality indexes,
                             pollutant levels (such as PM2.5, PM10, ozone, nitrogen dioxide, etc.),</p>
                     </div>
-                </div> 
+                </div>
                 <div class="col-lg-4">
                     <div class="card bg-transparent">
                         <i class="fas fa-wifi fa-2x"></i>
@@ -201,7 +203,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card bg-transparent">
+                    <div class="card bg-transparent" id="weatherClick">
                         <i class="fas fa-phone fa-2x"></i>
                         <h4 class="py-2">Weather Forecasting</h4>
                         <p class="para-light">Deliver accurate weather forecasts including information on temperature,
@@ -238,7 +240,7 @@
     </section> <!-- end of services -->
 
     <!-- Work -->
-    <section class="work d-flex align-items-center py-5 local" id="airQuality">
+    <section class="hidden work d-flex align-items-center py-5 local" id="airQuality">
         <div class="container-fluid text-light">
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right">
@@ -252,60 +254,117 @@
                                 <div class="location-container">
                                     <h2 class="sub-heading">Your Location :</h2>
                                     <label for="error-msg" style="color: red;"></label><br />
-                                    <input
-                                        type="number"
-                                        name="lat"
-                                        placeholder="Latitude"
-                                        id="latitude"
-                                        step="0.0001"
+                                    <input type="number" name="lat" placeholder="Latitude" id="latitude" step="0.0001"
                                         class="loc-input" />
-                                    
-                                    <input
-                                        type="number"
-                                        name="lon"
-                                        placeholder="Longitude"
-                                        id="longitude"
-                                        step="0.0001"
+
+                                    <input type="number" name="lon" placeholder="Longitude" id="longitude" step="0.0001"
                                         class="loc-input" />
                                     <button class="search-btn btn-info text-light" type="button">Search</button>
                                 </div>
 
-                            <p class="home_text" style="font-size: 50px; font-weight: 700;">Air Quality Index</p>
-                            <span class="air-quality" style="font-size: 40px;">...</span>
-                            <span class="arr" style="font-size: 40px;">&nbsp;&rarr;&nbsp;</span>
-                            <span class="air-quality-status" style="font-size: 40px;">...</span>
+                                <p class="home_text" style="font-size: 50px; font-weight: 700;">Air Quality Index</p>
+                                <span class="air-quality" style="font-size: 40px;">...</span>
+                                <span class="arr" style="font-size: 40px;">&nbsp;&rarr;&nbsp;</span>
+                                <span class="air-quality-status" style="font-size: 40px;">...</span>
                             </div>
-                        <div class="container" data-aos="fade-up">
-                            <div class="row g-5">
-                                <div class="col-6 text-start" style="border-right: 2px solid white; border-bottom: 2px solid white;">
-                                    <img src="assets/images/carbon-monoxide.png" height="60px" width="60px">
+                            <div class="container" data-aos="fade-up">
+                                <div class="row g-5">
+                                    <div class="col-6 text-start"
+                                        style="border-right: 2px solid white; border-bottom: 2px solid white;">
+                                        <img src="assets/images/carbon-monoxide.png" height="60px" width="60px">
                                         <span class="component-val" data-comp="co"></span>
-                                    <p class="detailss  home_text">Carbon Monoxide</p>
-                                </div>
-                                <div class="col-6" style="border-left: 2px solid white; border-bottom: 2px solid white;">
-                                    <img src="assets/images/ozone.png" height="60px" width="60px"> 
+                                        <p class="detailss  home_text">Carbon Monoxide</p>
+                                    </div>
+                                    <div class="col-6"
+                                        style="border-left: 2px solid white; border-bottom: 2px solid white;">
+                                        <img src="assets/images/ozone.png" height="60px" width="60px">
                                         <span class="component-val" data-comp="o3"></span>
                                         <p class="detailss  home_text">Ozone</p>
-                                </div>
-                                <div class="col-6" style="border-right: 2px solid white; border-top: 2px solid white;">
-                                    <img src="assets/images/particle.png" height="60px" width="60px">
+                                    </div>
+                                    <div class="col-6"
+                                        style="border-right: 2px solid white; border-top: 2px solid white;">
+                                        <img src="assets/images/particle.png" height="60px" width="60px">
                                         <span class="component-val" data-comp="pm2_5"></span>
                                         <p class="detailss  home_text">Fine particles matter</p>
+                                    </div>
+                                    <div class="col-6"
+                                        style="border-top: 2px solid white; border-left: 2px solid white;">
+                                        <img src="assets/images/ammonia.png" height="60px" width="60px">
+                                        <span class="component-val" data-comp="nh3"></span>
+                                        <p class="detailss home_text">Ammonia</p>
+                                    </div>
                                 </div>
-                                <div class="col-6" style="border-top: 2px solid white; border-left: 2px solid white;">
-                                    <img src="assets/images/ammonia.png" height="60px" width="60px">
-                                    <span class="component-val" data-comp="nh3"></span>
-                                    <p class="detailss home_text">Ammonia</p>
-                                </div>
-                            </div>
-                        </div> <!-- end of container -->
-                    </div> <!-- end of row -->
-                </div> <!-- end of col-lg-5 -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
+                            </div> <!-- end of container -->
+                        </div> <!-- end of row -->
+                    </div> <!-- end of col-lg-5 -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
     </section> <!-- end of work -->
 
+
+    <section class="weather d-flex align-items-center py-5" id="services">
+
+        <div class="containerr">
+            <div class="weather__header">
+                <form class="weather__search">
+                    <input type="text" placeholder="Search for a city..." class="weather__searchform">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form> 
+                <div class="weather__units">
+                    <span class="weather_unit_celsius">&#176C</span>
+                    <span class="weather_unit_farenheit">&#176F</span>
+                </div>
+            </div>
+            <div class="weather__body">
+                <h1 class="weather__city home_text"></h1>
+                <div class="weather__datetime">
+                </div>
+                <div class="weather__forecast"></div>
+                <div class="weather__icon">
+                </div>
+                <p class="weather__temperature">
+                </p>
+                <div class="weather__minmax">
+                    <p>Min: ...&#176</p>
+                    <p>Max: ...&#176</p>
+                </div>
+            </div>
     
+            <div class="weather__info">
+                <div class="weather__card">
+                    <i class="fa-solid fa-temperature-full"></i>
+                    <div>
+                        <p>Real Feel</p>
+                        <p class="weather__realfeel">...&#176</p>
+                    </div>
+                </div>
+                <div class="weather__card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div>
+                        <p>Humidity</p>
+                        <p class="weather__humidity">...&#176</p>
+                    </div>
+                </div>
+                <div class="weather__card">
+                    <i class="fa-solid fa-wind"></i>
+                    <div>
+                        <p>Wind</p>
+                        <p class="weather__wind">...&#176</p>
+                    </div>
+                </div>
+                <div class="weather__card">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <div>
+                        <p>Pressure</p>
+                        <p class="weather__pressure">...&#176</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section> <!-- end of services -->
+
+
 
 
     <!-- Plans -->
@@ -444,7 +503,7 @@
                                 <div class="swiper-slide">
                                     <div class="testimonial-card p-4">
                                         <p>Ensures the website is responsive and accessible across various devices and
-                                            platforms</p>
+                                            platforms with more Precision</p>
 
                                         <div class="d-flex pt-4">
                                             <div>
@@ -452,7 +511,7 @@
                                                     alt="testimonial">
                                             </div>
                                             <div class="ms-3 pt-2">
-                                                <h6>Jatin Bhanor</h6>
+                                                <h6>Jatin Bhanot</h6>
                                                 <p>Lead Developer</p>
                                             </div>
                                         </div>
@@ -520,7 +579,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
-                    <h4 class="py-1">Subscribe tfor latest updates</h4>
+                    <h4 class="py-1">Subscribe for latest updates</h4>
                     <p class="para-light">Stay informed and connected with our latest updates! Subscribe to receive
                         personalized notifications.</p>
                 </div>
@@ -743,7 +802,10 @@
     <script src="./js/script.js"></script>
     <script src="./js/air.js"></script>
     <script src="./js/onClicks.js"></script>
-    
+    <script src="./js/weather.js"></script>
+    <script src="https://kit.fontawesome.com/a692e1c39f.js" crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>

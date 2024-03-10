@@ -8403,6 +8403,10 @@ fieldset:disabled .btn {
 .local {
     display: none;
 }
+.weather
+{
+    display: block;
+}
 
 
 
