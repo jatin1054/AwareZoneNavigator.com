@@ -32,9 +32,15 @@ const onPositionGathers = (pos) => {
             const results = data.results;
             if (results.length > 0) {
                 addressValue = results[0].components.county;
+                // if(addressValue === "Chachyot")
+                // {
+                //     addressValue = "kalka"
+                // }
                 getWeather();
                 console.log(addressValue + "-----inside");
             } else {
+                addressValue = "kalka";
+                console.log(addressValue + "---- else")
                 console.log("No results found");
             }
         })
@@ -64,7 +70,7 @@ document.querySelector(".weather__search").addEventListener('submit', e => {
     // prevent default action
     e.preventDefault();
     // change current city
-    currCity = search.value;
+    addressValue = search.value;
     // get weather forecast 
     getWeather();
     // clear form

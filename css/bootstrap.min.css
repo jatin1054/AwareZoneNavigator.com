@@ -8405,7 +8405,7 @@ fieldset:disabled .btn {
 }
 .weather
 {
-    display: block;
+    display: none;
 }
 
 
